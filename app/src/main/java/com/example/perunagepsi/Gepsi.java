@@ -7,16 +7,19 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.location.Geocoder;
 
 import androidx.core.content.ContextCompat;
 
 public class Gepsi implements LocationListener {
+
     Context context;
         public Gepsi(Context c){
             context = c;
         }
-
+  /*  public Geocoder (Context c){
+            context = c;
+        } */
 
     public Location getLocation() {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
